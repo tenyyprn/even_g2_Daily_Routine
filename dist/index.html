@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Daily Routine</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0e0e0e;
+        --fg: #e0e0e0;
+        --accent: #2be656;
+        --surface: #1f1f1f;
+        --border: #3a3a3a;
+      }
+      * { box-sizing: border-box; }
+      body {
+        font-family: -apple-system, "Segoe UI", "Hiragino Sans", "Noto Sans CJK JP", sans-serif;
+        margin: 0;
+        padding: 20px;
+        background: var(--bg);
+        color: var(--fg);
+        max-width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      h1 {
+        font-size: 1.2em;
+        margin: 0 0 6px 0;
+        color: var(--accent);
+      }
+      .subtitle {
+        font-size: 0.85em;
+        color: #888;
+        margin: 0 0 18px 0;
+      }
+      .task-row {
+        display: flex;
+        margin-bottom: 8px;
+        gap: 8px;
+      }
+      .task-row input[type="text"] {
+        flex: 1;
+        padding: 12px;
+        background: var(--surface);
+        color: var(--fg);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        font-size: 16px;
+        min-width: 0;
+      }
+      .task-row input[type="text"]:focus {
+        outline: none;
+        border-color: var(--accent);
+      }
+      .task-row .order-btn,
+      .task-row .delete-btn {
+        padding: 0 12px;
+        background: transparent;
+        color: #aaa;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+        min-width: 40px;
+      }
+      .task-row .order-btn:active {
+        background: #1f3a1f;
+        color: var(--accent);
+      }
+      .task-row .order-btn:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+      }
+      .task-row .delete-btn:active {
+        background: #5a2020;
+        color: #fff;
+      }
+      .add-btn {
+        width: 100%;
+        padding: 14px;
+        background: var(--accent);
+        color: #000;
+        border: none;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 12px;
+      }
+      .add-btn:active { opacity: 0.7; }
+      .reset-row {
+        margin-top: 18px;
+        text-align: right;
+      }
+      .reset-btn {
+        background: transparent;
+        color: #888;
+        border: none;
+        font-size: 0.9em;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      .info {
+        font-size: 0.8em;
+        color: #777;
+        margin-top: 20px;
+        line-height: 1.5;
+      }
+      .empty {
+        text-align: center;
+        color: #666;
+        padding: 30px 0;
+        font-size: 0.9em;
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-K44270HC.js"></script>
+  </head>
+  <body>
+    <h1>Daily Routine</h1>
+    <p class="subtitle">タスクを編集 — G2 装着時に反映されます</p>
+    <div id="task-list"></div>
+    <button class="add-btn" id="add-btn">+ タスクを追加</button>
+    <div class="reset-row">
+      <button class="reset-btn" id="reset-btn">今日のチェックをすべてリセット</button>
+    </div>
+    <p class="info">
+      ・追加/編集は自動保存<br />
+      ・タスクを削除すると今日の進捗もリセットされます<br />
+      ・日付が変わると自動的にチェックがクリアされます
+    </p>
+  </body>
+</html>
