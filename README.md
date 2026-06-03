@@ -194,3 +194,4 @@ Personal/private project. 公開予定なし(将来公開する場合はライ�
 - [Even Hub Developer Documentation](https://hub.evenrealities.com/docs/getting-started/overview)
 - [`@evenrealities/even_hub_sdk` on npm](https://www.npmjs.com/package/@evenrealities/even_hub_sdk)
 - [Even Realities Community Discord](https://discord.gg/Y4jHMCU4sv)
+# even_g2_routine
